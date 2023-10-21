@@ -1,0 +1,14 @@
+<h1>Տեղադրել ավտոպահեստամասեր</h1>
+
+<a href="{% url 'car_parts' %}">Հետ</a>
+<br>
+<a href="{% url 'home' %}">Գլխավոր էջ</a>
+
+
+<form action="{% url 'add_car_parts' %}" method="post" enctype="multipart/form-data">
+    <ul>
+     {% csrf_token %}
+        {{ form.as_p }}
+    </ul>
+    <button>Add</button>
+</form>

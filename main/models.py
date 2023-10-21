@@ -34,3 +34,11 @@ class AddCarImage(models.Model):
         return self.post.title
 
 
+class CarParts(models.Model):
+    photo = models.ImageField(upload_to='car_parts')
+    description = models.TextField()
+    value = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.value
+

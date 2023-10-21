@@ -1,0 +1,13 @@
+<h1>Ավտոպահեստամասեր</h1>
+<br>
+<a href="{% url 'home' %}">Գլխավոր էջ</a>
+
+<form>
+    {% for p in posts %}
+    <br>
+    Նկարագրություն - {{p.description}}<br>
+    Արժեք - {{p.value}}<br>
+    <img alt="Responsive image" class="parts-responsive" src="{{p.photo.url}}">
+
+</form>
+{% endfor %}
