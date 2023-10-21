@@ -1,0 +1,27 @@
+ <div class="features">
+
+<h1>Login</h1>
+
+<form action="" method="POST">
+     {% csrf_token %}
+
+    <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">username</label>
+    <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+      <br>
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password">
+  </div>
+<br>
+        {% for message in messages %}
+    <p id="messages">{{message}}</p>
+    {% endfor %}
+
+<button>login</button>
+
+</form>
+
+<a href="{% url 'register' %}">Գրանցվել</a>
