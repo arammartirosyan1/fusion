@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s ease-out;
+}
+
+:root {
+    --col1: #e1f3f5;
+    --col2: #0d153a;
+    --col3:  #22d1ee;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: var(--col1);
+}
+
+
+aside {
+    width: 20%;
+    height: 100vh;
+    background-color: var(--col2);
+    display: flex;
+    flex-direction: column;
+    color: #e1f3f5;
+}
+
+.logo-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside img {
+    width: 80%;
+    height: auto;
+}
+
+aside h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--col3);
+}
+
+aside ul {
+    width: 90%;
+    height: 65%;
+    outline: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+
+aside ul a {
+    text-decoration: none;
+    color: var(--col3);
+    width: 100%;
+    /* background: var(--col3); */
+    padding: 5px;
+    font-size: 18px;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--col3);
+}
+
+aside ul a li{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 1rem;
+}
+
+
+aside ul a:hover {
+    border-bottom: 2px solid var(--col1);
+    color: var(--col1);
+}
