@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem
+from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem, Craftsman
 from .forms import UserForm, CarPartsAddForm, AccessoriesAddForm, ProblemAddForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -123,3 +123,12 @@ def add_problem(request):
             return redirect('problem')
     form = ProblemAddForm()
     return render(request, 'main/add_problem.html', {'form': form})
+
+
+def craftsman(request):
+    posts = Craftsman.objects.all()
+    return render(request, 'main/craftsman.html', {'posts': posts})
+
+
+def youtube(request):
+    return render(request, 'main/youtube.html')

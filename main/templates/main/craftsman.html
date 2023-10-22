@@ -1,0 +1,13 @@
+<h1>Արեստավորներ</h1>
+<br>
+<a href="{% url 'index' %}">Գլխավոր էջ</a>
+
+<form>
+    {% for p in posts %}
+    <br>
+    {{p.profession}}
+    {{p.name}}
+    "{{p.number}}"<br>
+
+</form>
+{% endfor %}

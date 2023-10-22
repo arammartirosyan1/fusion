@@ -55,3 +55,12 @@ class Accessories(models.Model):
 class Problem(models.Model):
     photo = models.ImageField(upload_to='problem')
     text = models.TextField()
+
+
+class Craftsman(models.Model):
+    name = models.CharField(max_length=50)
+    profession = models.CharField(max_length=50)
+    number = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name

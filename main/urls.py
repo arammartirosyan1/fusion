@@ -16,5 +16,7 @@ urlpatterns = [
     path('add_accessories', views.add_accessories, name='add_accessories'),
     path('problem', views.problem, name='problem'),
     path('add_problem', views.add_problem, name='add_problem'),
+    path('craftsman', views.craftsman, name='craftsman'),
+    path('youtube', views.youtube, name='youtube'),
 
 ]

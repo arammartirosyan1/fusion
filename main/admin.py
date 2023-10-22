@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem
+from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem, Craftsman
 
 
 class CarsImageAdmin(admin.StackedInline):
@@ -24,4 +24,6 @@ admin.site.register(AddCarImage)
 admin.site.register(CarParts)
 admin.site.register(Accessories)
 admin.site.register(Problem)
+admin.site.register(Craftsman)
+
 
