@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories
-from .forms import UserForm, CarPartsAddForm, AccessoriesAddForm
+from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem
+from .forms import UserForm, CarPartsAddForm, AccessoriesAddForm, ProblemAddForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
@@ -107,3 +107,19 @@ def add_accessories(request):
             return redirect('accessories')
     form = AccessoriesAddForm()
     return render(request, 'main/add_accessories.html', {'form': form})
+
+
+def problem(request):
+    posts = Problem.objects.all()
+    return render(request, 'main/problem.html', {'posts': posts})
+
+
+@login_required(login_url='login_user')
+def add_problem(request):
+    if request.method == 'POST':
+        form = ProblemAddForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('problem')
+    form = ProblemAddForm()
+    return render(request, 'main/add_problem.html', {'form': form})

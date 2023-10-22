@@ -50,3 +50,8 @@ class Accessories(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Problem(models.Model):
+    photo = models.ImageField(upload_to='problem')
+    text = models.TextField()
