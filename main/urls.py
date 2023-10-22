@@ -12,5 +12,7 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('car_parts', views.car_parts, name='car_parts'),
     path('add_car_parts', views.add_car_parts, name='add_car_parts'),
+    path('accessories', views.accessories, name='accessories'),
+    path('add_accessories', views.add_accessories, name='add_accessories'),
 
 ]

@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import CarParts
+from .models import CarParts, Accessories
 
 
 class UserForm(UserCreationForm):
@@ -15,3 +15,9 @@ class CarPartsAddForm(ModelForm):
     class Meta:
         model = CarParts
         fields = ('photo', 'description', 'value')
+
+
+class AccessoriesAddForm(ModelForm):
+    class Meta:
+        model = Accessories
+        fields = ('name', 'value', 'photo')
