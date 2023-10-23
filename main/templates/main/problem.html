@@ -1,12 +1,16 @@
-<h1>Մեքենայի հետ կապված խնդիր</h1>
-<br>
+{% extends 'main/layout_home.html' %}
 
+{% block content %}
+<div class="features">
+<h1>Մեքենայի հետ կապված խնդիր</h1>
 <form>
     {% for p in posts%}
     <br>
-    {{p.text}}
+    Խնդիր _     {{p.text}}
     <br>
     <img alt="Responsive image" class="problem-responsive" src="{{p.photo.url}}">
-
-</form>
+<br>
 {% endfor %}
+</form>
+    <div>
+{% endblock %}

@@ -1,13 +1,14 @@
- <div class="features">
+{% extends 'main/layout_home.html' %}
 
-<h1>Login</h1>
-
+{% block content %}
+<div class="features">
+<h1>Մուտք</h1>
 <form action="" method="POST">
      {% csrf_token %}
 
     <form>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">username</label>
+    <label for="exampleInputEmail1" class="form-label">Username</label>
     <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
@@ -15,13 +16,10 @@
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="password" class="form-control" name="password">
   </div>
-<br>
-        {% for message in messages %}
-    <p id="messages">{{message}}</p>
-    {% endfor %}
 
-<button>login</button>
+
+<button> Մուտք </button>
 
 </form>
-
-<a href="{% url 'register' %}">Գրանցվել</a>
+    <div>
+{% endblock %}

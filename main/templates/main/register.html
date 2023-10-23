@@ -1,14 +1,26 @@
-<a href="{% url 'login_user' %}">Մուտք</a>
-<br>
-<div class="col-md-6 offset-md-3">
-    <h1>Register</h1>
+{% extends 'main/layout_home.html' %}
+
+{% block content %}
+<div class="features">
+    <h1>Գրանցվել</h1>
     <br/>
 <form method="POST" action="">
     {% csrf_token %}
-    {{ form.as_p }}
-
+    {{form.username.label}}
+    {{form.username}}
+    <br>
+    {{form.email.label}}
+    {{form.email}}
+    <br>
+    {{form.password1.label}}
+    {{form.password1}}
+    <br>
+    {{form.password2.label}}
+    {{form.password2}}
     <br/>
-    <button type="submit" class="btn btn secondary">Register</button>
+    <button>Գրանցվել</button>
         </form>
 </div>
+    <div>
+{% endblock %}
 

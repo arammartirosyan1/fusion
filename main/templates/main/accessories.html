@@ -1,5 +1,9 @@
-<h1>Ակսեսուարներ</h1>
+{% extends 'main/layout_home.html' %}
 
+{% block content %}
+<div class="features">
+
+<h1>Ակսեսուարներ</h1>
 
 <form>
     {% for p in posts %}
@@ -8,7 +12,6 @@
     Արժեք - {{p.value}}<br>
     <img alt="Responsive image" class="accessories-responsive" src="{{p.photo.url}}">
     {% endfor %}
-
-
     </form>
-
+    <div>
+{% endblock %}

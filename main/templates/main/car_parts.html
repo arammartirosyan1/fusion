@@ -1,13 +1,14 @@
+{% extends 'main/layout_home.html' %}
+
 {% block content %}
 <div class="features">
 <h1>Ավտոպահեստամասեր</h1>
 <form>
     {% for p in posts %}
-    <br>
     Նկարագրություն - {{p.description}}<br>
     Արժեք - {{p.value}}<br>
     <img alt="Responsive image" class="parts-responsive" src="{{p.photo.url}}">
+{% endfor %}
 </form>
     <div>
-{% endfor %}
 {% endblock %}
