@@ -82,3 +82,14 @@ aside ul a:hover {
     border-bottom: 2px solid var(--col1);
     color: var(--col1);
 }
+
+main .features {
+    float: left;
+    color: #000000;
+    margin-top: -720px;
+    text-align: center;
+    width: 100%;
+}
+
+main .features h1 {max-width: 500px; margin: 20px auto; font-size: 50px;}
+main .features p {max-width: 500px; margin: 20px auto}
