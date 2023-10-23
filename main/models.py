@@ -64,3 +64,11 @@ class Craftsman(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Contacts(models.Model):
+    el_post = models.EmailField()
+    text = models.TextField()
+
+    def __str__(self):
+        return self.el_post

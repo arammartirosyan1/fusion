@@ -1,12 +1,18 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem, Craftsman
-from .forms import UserForm, CarPartsAddForm, AccessoriesAddForm, ProblemAddForm
+from .forms import UserForm, CarPartsAddForm, AccessoriesAddForm, ProblemAddForm, ContactsForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    return render(request, 'main/index.html')
+    if request.method == 'POST':
+        form = ContactsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    form = ContactsForm()
+    return render(request, 'main/index.html', {'form': form})
 
 
 def cars(request):

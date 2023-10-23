@@ -3,16 +3,19 @@
 {% block content %}
 <div class="features">
 
-<h1>Տեղադրել հայտարարություն</h1>
-
 <form>
-<a href="{% url 'add_car' %}">Տեղադրել մեքենա</a>
-<br>
-<a href="{% url 'add_car_parts' %}">Տեղադրել ավտոպահեստամաս</a>
-<br>
-<a href="{% url 'add_accessories' %}">Ավելացնել ակսեսուարներ</a>
-<br>
-<a href="{% url 'add_problem' %}">Ձեր մեքենայի խնդիր</a>
+    <h2>Տեղադրել հայտարարություն</h2>
+    <br>
+<a href="{% url 'add_car' %}"><li class="btn btn-dark"><i class="fas fa-plus-circle"></i>Մեքենա</li></a>
+<a href="{% url 'add_car_parts' %}"><li class="btn btn-secondary"><i class="fas fa-plus-circle"></i>Ավտոպահեստամաս</li></a>
+<a href="{% url 'add_accessories' %}"><li class="btn btn-info"><i class="fas fa-plus-circle"></i>Ակսեսուար</li></a>
+<a href="{% url 'add_problem' %}"><li class="btn btn-danger"><i class="fas fa-plus-circle"></i>Անսարքություն</li></a>
+    <h1>************************</h1>
+<h2>Չի թույլատրվում</h2>
+    <p>* Տեղադրելով այն տարբեր մակնիշների եւ մոդելների մեջ։ Մեկ տրանսպորտային միջոցի հայտարարությունը տեղադրեք մեկ անգամ՝ հենց իր մակնիշի եւ մոդելի մեջ։</p>
+    <p>* Հայտարարության նկարների մեջ տեղադրել հայտարարությանը չվերաբերող լրացուցիչ տեքստային ինֆորմացիա, նշաններ կամ պիտակներ։<p>
+    <p>* Վաճառվող ապրանքի արժեքը նշել շուկայականից անտրամաբանական ցածր գներով։ Նման գնային մանիպուլյացիաները մենք համարում ենք ոչ բարեխիղճ գործիք՝ որոնման արդյուքներում ուշադրություն գրավելու համար։</p>
+
 
 </form>
     <div>
