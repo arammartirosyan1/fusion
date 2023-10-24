@@ -95,5 +95,7 @@ main .features h1 {max-width: 500px; margin: 20px auto; font-size: 50px;}
 main .features p {max-width: 500px; margin: 20px auto}
 main .features img{max-width: 800px}
 main .features input{max-width: 500px; margin: 20px auto}
+main .features div{max-width: 800px; margin: 0px auto}
+
 
 

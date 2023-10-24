@@ -1,12 +1,26 @@
-<h1>Տեղադրել ավտոպահեստամասեր</h1>
+{% extends 'main/layout_home.html' %}
 
-<a href="{% url 'home' %}">Գլխավոր էջ</a>
-
+{% block content %}
+<div class="features">
+<h2>Տեղադրել ավտոպահեստամասեր</h2>
 
 <form action="{% url 'add_car_parts' %}" method="post" enctype="multipart/form-data">
     <ul>
      {% csrf_token %}
-        {{ form.as_p }}
+        Նկարագրություն
+        <br>
+        {{ form.description }}
+        <br>
+        Արժեք
+        <br>
+        {{ form.value }}
+        <br>
+        Նկար
+        <br>
+        {{ form.photo }}
     </ul>
-    <button>Add</button>
+    <button>Տեղադրել</button>
+
 </form>
+        <div>
+{% endblock %}

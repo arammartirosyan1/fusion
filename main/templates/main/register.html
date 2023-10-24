@@ -6,16 +6,20 @@
     <br/>
 <form method="POST" action="">
     {% csrf_token %}
-    {{form.username.label}}
+    Username
+    <br>
     {{form.username}}
     <br>
-    {{form.email.label}}
+    Email
+    <br>
     {{form.email}}
     <br>
-    {{form.password1.label}}
+    Password
+    <br>
     {{form.password1}}
     <br>
-    {{form.password2.label}}
+    Repeat password
+    <br>
     {{form.password2}}
     <br/>
     <button>Գրանցվել</button>
