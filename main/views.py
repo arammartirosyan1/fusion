@@ -75,7 +75,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('login_user')
+    return redirect('index')
 
 
 @login_required(login_url='login_user')

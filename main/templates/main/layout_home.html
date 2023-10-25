@@ -30,10 +30,16 @@
 <a href="craftsman"><li><i class="fas fa-solid fa-toolbox"></i><span>Արեստավորներ</span></li></a>
 <a href="youtube"><li><i class="fab fa-youtube"></i><span>YouTube Fusion</span></li></a>
 <a href="home"><li><i class="fas fa-solid fa-plus"></i><span>Տեղադրել հայտարարություն</span></li></a>
-<a href="login_user"><li><i class="fas fa-sign-in-alt"></i><span>Մուտք</span></li></a>
-<a href="register"><li><i class="far fa-user"></i><span>Գրանցվել</span></li></a>
 
+{% if user.is_authenticated %}
+            <a href="logout_user"><li><i class="fas fa-sign-in-alt"></i><span>Դուրս գալ</span></li></a>
+
+{% else %}
+            <a href="login_user"><li><i class="fas fa-sign-in-alt"></i><span>Մուտք</span></li></a>
+            <a href="register"><li><i class="far fa-user"></i><span>Գրանցվել</span></li></a>
+{% endif %}
         </ul>
+
     </aside>
     <main>
         {% block content %}
