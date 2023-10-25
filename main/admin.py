@@ -19,12 +19,44 @@ class CarsImageAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.register(AddCar)
-admin.site.register(AddCarImage)
-admin.site.register(CarParts)
-admin.site.register(Accessories)
-admin.site.register(Problem)
-admin.site.register(Craftsman)
-admin.site.register(Contacts)
+class AddCarAdmin(admin.ModelAdmin):
+    list_display = ['title', 'description']
+
+
+class AddCarImageAdmin(admin.ModelAdmin):
+    list_display = ['post', 'images']
+
+
+class CarPartsAdmin(admin.ModelAdmin):
+    list_display = ['description']
+    list_filter = ['value']
+
+
+class AccessoriesAdmin(admin.ModelAdmin):
+    search_fields = ['name']
+    list_filter = ['value']
+
+
+class ProblemAdmin(admin.ModelAdmin):
+    list_display = ['text', 'photo']
+
+
+class CraftsmanAdmin(admin.ModelAdmin):
+    search_fields = ['profession']
+    list_display = ['name', 'profession', 'number']
+
+
+class ContactsAdmin(admin.ModelAdmin):
+    search_fields = ['el_post']
+    list_display = ['el_post', 'text']
+
+
+admin.site.register(AddCar, AddCarAdmin)
+admin.site.register(AddCarImage, AddCarImageAdmin)
+admin.site.register(CarParts, CarPartsAdmin)
+admin.site.register(Accessories, AccessoriesAdmin)
+admin.site.register(Problem, ProblemAdmin)
+admin.site.register(Craftsman, CraftsmanAdmin)
+admin.site.register(Contacts, ContactsAdmin)
 
 
