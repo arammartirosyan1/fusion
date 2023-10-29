@@ -6,13 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    if request.method == 'POST':
-        form = ContactsForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    form = ContactsForm()
-    return render(request, 'main/index.html', {'form': form})
+    return render(request, 'main/index.html')
 
 
 def cars(request):
@@ -138,3 +132,17 @@ def craftsman(request):
 
 def youtube(request):
     return render(request, 'main/youtube.html')
+
+
+def about(request):
+    return render(request, 'main/about.html')
+
+
+def contact(request):
+    if request.method == 'POST':
+        form = ContactsForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    form = ContactsForm()
+    return render(request, 'main/contact.html', {'form': form})

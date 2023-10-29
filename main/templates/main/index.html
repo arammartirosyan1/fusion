@@ -1,24 +1,14 @@
 {% extends 'main/layout_home.html' %}
-
-
- {% block content %}
+{% load static %}
+{% block content %}
 
 <div class="features">
-    <h2>Մեր մասին</h2>
-    <p>Կայքում կարող եք տեղադրել ձեր վաճառքի մեքենան, ավտոպահեստամասերը, աքսեսուարները, հարցնեք ձեր խնդիրների մասին, իմանաք տեղեկություններ որոնք կապված են ձեր մեքենայի հետ, իմանաք արեստավորների համարներ, կիսվեք ձեր ունեցած փորձով</p>
-    <h1>*************************</h1>
-<form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
-    <ul>
-    {% csrf_token %}
-    Հաղորդագրություն
+
+<a href="{% url 'about' %}"><li class="btn btn-info"><i class="fas fa-plus-circle"></i>Մեր մասին</li></a>
+<a href="{% url 'contact' %}"><li class="btn btn-info"><i class="fas fa-plus-circle"></i>  Կապ  </li></a>
     <br>
-    {{form.text}}
-    <br>
-    Էլեկտրոնային հասցե
-    <br>
-    {{form.el_post}}
-    </ul>
-    <button>Ուղարկել</button>
-</form>
+    <img src="{% static 'main/img/img.jpg' %}">
+
+
     </div>
         {% endblock %}

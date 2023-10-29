@@ -1,0 +1,21 @@
+{% extends 'main/layout_home.html' %}
+{% block content %}
+
+<div class="features">
+    <h2>Հետադարձ կապ</h2>
+    <p>Ունեք դիտողություններ` գրե՛ք մեզ: Մենք սիրո՛ւմ ենք հետադարձ կապը: Սա Ձեր կայքն է, և Ձեր առաջարկները կօգնեն մեզ բարելավել այն:</p>
+<form action="{% url 'contact' %}" method="post" enctype="multipart/form-data">
+    <ul>
+    {% csrf_token %}
+    Հաղորդագրություն
+    <br>
+    {{form.text}}
+    <br>
+    Էլեկտրոնային հասցե
+    <br>
+    {{form.el_post}}
+    </ul>
+    <button>Ուղարկել</button>
+</form>
+     </div>
+        {% endblock %}
