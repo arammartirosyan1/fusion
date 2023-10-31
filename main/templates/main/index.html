@@ -1,14 +1,17 @@
 {% extends 'main/layout_home.html' %}
 {% load static %}
 {% block content %}
-
 <div class="features">
+    <ul>
 
 <a href="{% url 'about' %}"><li class="btn btn-info"><i class="fas fa-plus-circle"></i>Մեր մասին</li></a>
 <a href="{% url 'contact' %}"><li class="btn btn-info"><i class="fas fa-plus-circle"></i>  Կապ  </li></a>
     <br>
-    <img src="{% static 'main/img/img.jpg' %}">
-
+<br>
+        {% for year in car_year %}
+        <a href="{% url 'model' year.id %}" class="btn btn-secondary">{{ year.year }}</a>
+        {% endfor %}
+    </ul>
 
     </div>
         {% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'main/layout_home.html' %}
+{% load static %}
+{% block content %}
+<div class="features">
+
+<ul>
+{% for fusionyear in year.fusionyear_set.all %}
+<#img src="{% static 'main/img/2017_fusion.jpg' %}">
+
+    <img alt="Responsive image" class="fusion-responsive" src="{{fusionyear.photo.url}}"><br>
+    <h2>{{ fusionyear.title }}</h2><br>
+    {{ fusionyear.text }}<br>
+{% endfor %}
+</ul>
+ </div>
+        {% endblock %}

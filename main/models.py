@@ -72,3 +72,15 @@ class Contacts(models.Model):
 
     def __str__(self):
         return self.el_post
+
+
+class Fusion(models.Model):
+    year = models.IntegerField()
+
+
+class FusionYear(models.Model):
+    year_choose = models.ForeignKey(Fusion, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='fusion')
+    title = models.CharField(max_length=50)
+    text = models.TextField()
+
