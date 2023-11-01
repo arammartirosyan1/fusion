@@ -7,9 +7,9 @@
 }
 
 :root {
-    --col1: #e1f3f5;
-    --col2: #0d153a;
-    --col3:  #22d1ee;
+    --col1: #FFFFFF;
+    --col2: #696969;
+    --col3:  #DCDCDC;
 }
 
 body {
@@ -25,7 +25,9 @@ aside {
     background-color: var(--col2);
     display: flex;
     flex-direction: column;
-    color: #e1f3f5;
+    color: #000000;
+    border-right: 7px solid #000000
+
 }
 
 .logo-box {
@@ -44,7 +46,7 @@ aside img {
 aside h1 {
     width: 100%;
     text-align: center;
-    color: var(--col3);
+    color: #000000;
 }
 
 aside ul {
@@ -67,7 +69,7 @@ aside ul a {
     padding: 5px;
     font-size: 18px;
     border-radius: 10px;
-    border-bottom: 2px solid var(--col3);
+    border-bottom: 2px solid #000000;
 }
 
 aside ul a li{
@@ -92,8 +94,8 @@ main .features {
 }
 
 main .features h1 {max-width: 500px; margin: 20px auto; font-size: 50px;}
-main .features p {max-width: 500px; margin: 20px auto}
-main .features img{max-width: 900px; margin: 10px auto}
+main .features p {max-width: 850px; margin: 20px auto}
+main .features img{max-width: 850px; margin: 10px auto}
 main .features input{max-width: 500px; margin: 20px auto}
 main .features div{max-width: 800px; margin: 0px auto}
 
