@@ -80,6 +80,7 @@ class Fusion(models.Model):
 
 class FusionYear(models.Model):
     year_choose = models.ForeignKey(Fusion, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='fusion', null=True)
     title = models.CharField(max_length=50)
     text = models.TextField()
 
