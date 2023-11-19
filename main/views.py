@@ -1,17 +1,17 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem, Craftsman, Fusion, FusionYear
+from .models import Cars, CarsImage, AddCar, AddCarImage, CarParts, Accessories, Problem, Craftsman, CarsYear
 from .forms import UserForm, CarPartsAddForm, AccessoriesAddForm, ProblemAddForm, ContactsForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    car_year = Fusion.objects.all()
-    return render(request, 'main/index.html', {'car_year': car_year})
+    posts = CarsYear.objects.all()
+    return render(request, 'main/index.html', {'posts': posts})
 
 
 def model(request, year_id):
-    year = get_object_or_404(Fusion, pk=year_id)
+    year = get_object_or_404(CarsYear, pk=year_id)
     return render(request, 'main/model.html', {'year': year})
 
 

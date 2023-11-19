@@ -23,20 +23,20 @@
 
         </div>
         <ul>
-<a href="cars"><li><i class="fas fa-car"></i><span>Վաճառքի մեքենաներ</span></li></a>
-<a href="car_parts"><li><i class="fas fa-car-battery"></i><span>Ավտոպահեստամասեր</span></li></a>
-<a href="problem"><li><i class="fas fa-exclamation-triangle"></i><span>Մեքենայի հետ կապված խնդիրներ</span></li></a>
-<a href="accessories"><li><i class="fas fa-air-freshener"></i><span>Ակսեսուարներ</span></li></a>
-<a href="craftsman"><li><i class="fas fa-solid fa-toolbox"></i><span>Արեստավորներ</span></li></a>
-<a href="youtube"><li><i class="fab fa-youtube"></i><span>YouTube Fusion</span></li></a>
-<a href="home"><li><i class="fas fa-solid fa-plus"></i><span>Տեղադրել հայտարարություն</span></li></a>
+<a href="{% url 'cars' %}"><li><i class="fas fa-car"></i><span>Վաճառքի մեքենաներ</span></li></a>
+<a href="{% url 'car_parts' %}"><li><i class="fas fa-car-battery"></i><span>Ավտոպահեստամասեր</span></li></a>
+<a href="{% url 'problem' %}"><li><i class="fas fa-exclamation-triangle"></i><span>Մեքենայի հետ կապված խնդիրներ</span></li></a>
+<a href="{% url 'accessories' %}"><li><i class="fas fa-air-freshener"></i><span>Ակսեսուարներ</span></li></a>
+<a href="{% url 'craftsman' %}"><li><i class="fas fa-solid fa-toolbox"></i><span>Արեստավորներ</span></li></a>
+<a href="{% url 'youtube' %}"><li><i class="fab fa-youtube"></i><span>YouTube Fusion</span></li></a>
+<a href="{% url 'home' %}"><li><i class="fas fa-solid fa-plus"></i><span>Տեղադրել հայտարարություն</span></li></a>
 
 {% if user.is_authenticated %}
-            <a href="logout_user"><li><i class="fas fa-sign-in-alt"></i><span>Դուրս գալ</span></li></a>
+            <a href="{% url 'logout_user' %}"><li><i class="fas fa-sign-in-alt"></i><span>Դուրս գալ</span></li></a>
 
 {% else %}
-            <a href="login_user"><li><i class="fas fa-sign-in-alt"></i><span>Մուտք</span></li></a>
-            <a href="register"><li><i class="far fa-user"></i><span>Գրանցվել</span></li></a>
+            <a href="{% url 'login_user' %}"><li><i class="fas fa-sign-in-alt"></i><span>Մուտք</span></li></a>
+            <a href="{% url 'register' %}"><li><i class="far fa-user"></i><span>Գրանցվել</span></li></a>
 {% endif %}
         </ul>
 

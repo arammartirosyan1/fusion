@@ -2,13 +2,12 @@
 {% load static %}
 {% block content %}
 <div class="features">
-<ul>
-{% for fusionyear in year.fusionyear_set.all %}
-    <img alt="Responsive image" class="fusion-responsive" src="{{fusionyear.photo.url}}">
-    <h2>{{ fusionyear.title }}</h2>
-    <p>{{ fusionyear.text }}</p><br>
-{% endfor %}
-</ul>
+{% for post in year.postyear_set.all %}
+    <img alt="Responsive image" class="problem-responsive" src="{{post.photo.url}}">
+    <h2>{{ post.name }}</h2>
+    <p>{{ post.title }}</p>
+    <p>{{ post.description }}</p>
+    {% endfor %}
  </div>
 
         {% endblock %}

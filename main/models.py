@@ -74,13 +74,18 @@ class Contacts(models.Model):
         return self.el_post
 
 
-class Fusion(models.Model):
-    year = models.IntegerField()
+class CarsYear(models.Model):
+    cars_year = models.IntegerField()
+    pub_date = models.DateField(auto_now_add=True)
 
 
-class FusionYear(models.Model):
-    year_choose = models.ForeignKey(Fusion, on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to='fusion', null=True)
-    title = models.CharField(max_length=50)
-    text = models.TextField()
+class PostYear(models.Model):
+    year = models.ForeignKey(CarsYear, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='year', null=True)
+    name = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return f'{self.year} _ {self.name}'
 

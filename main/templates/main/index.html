@@ -8,13 +8,11 @@
 <a href="{% url 'contact' %}"><li class="btn btn-dark"><i class="fas fa-plus-circle"></i>  Կապ  </li></a>
     <br>
 <br>
-        {% for year in car_year %}
-        <a href="{% url 'model' year.id %}" class="btn btn-secondary">{{ year.year }}</a>
+        {% for p in posts %}
+        <a href="{% url 'model' p.id %}">{{p.cars_year}}</a>
         {% endfor %}
     </ul>
-      <img src="{% static 'main/img/2020.jpg' %}" >
 
-        </div>
 
     </div>
         {% endblock %}

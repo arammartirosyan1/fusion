@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('<int:year_id>model/', views.model, name='model'),
+    path('<int:year_id>/model', views.model, name='model'),
     path('cars', views.cars, name='cars'),
     path('<int:id>', views.detail, name='detail'),
     path('add_car', views.add_car, name='add_car'),
@@ -21,5 +21,4 @@ urlpatterns = [
     path('youtube', views.youtube, name='youtube'),
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
-
 ]
