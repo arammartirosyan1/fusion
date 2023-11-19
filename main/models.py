@@ -78,6 +78,9 @@ class CarsYear(models.Model):
     cars_year = models.IntegerField()
     pub_date = models.DateField(auto_now_add=True)
 
+    def __str__(self):
+        return self.cars_year
+
 
 class PostYear(models.Model):
     year = models.ForeignKey(CarsYear, on_delete=models.CASCADE)
@@ -88,4 +91,12 @@ class PostYear(models.Model):
 
     def __str__(self):
         return f'{self.year} _ {self.name}'
+
+
+class About(models.Model):
+    title = models.CharField(max_length=100)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.title
 

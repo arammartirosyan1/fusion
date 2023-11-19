@@ -33,3 +33,5 @@ class ContactsForm(ModelForm):
     class Meta:
         model = Contacts
         fields = ('el_post', 'text')
+
+
